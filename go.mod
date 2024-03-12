@@ -1,6 +1,6 @@
 module example.com/simplebank
 
-go 1.23.0
+go 1.21.7
 
 require (
 	github.com/jackc/pgx/v5 v5.5.3
