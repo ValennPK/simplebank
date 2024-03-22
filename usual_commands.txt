@@ -75,3 +75,13 @@ SELECT a.datname,
 FROM pg_stat_activity a
 JOIN pg_locks l ON l.pid = a.pid
 ORDER BY a.query_start;
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+git add .
+
+git commit -m "comment"
+
+git push origin main
