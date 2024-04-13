@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+</head>
+<body>
+    <h2>Registro de Usuario</h2>
+    <form id="userForm" action="/users" method="POST">
+        <label for="Username">Username:</label><br>
+        <input type="text" id="Username" name="username"><br>
+        
+        <label for="Password">Password:</label><br>
+        <input type="password" id="Password" name="password"><br>
+        
+        <label for="FullName">Full Name:</label><br>
+        <input type="text" id="FullName" name="full_name"><br>
+        
+        <label for="Email">Email:</label><br>
+        <input type="email" id="Email" name="email"><br><br>
+        
+        <input type="Submit" value="Submit" onclick="submitForm()">
+    </form>
+    
+    <script>
+    function submitForm() {
+        var form = document.getElementById("userForm");
+        var formData = new FormData(form);
+        var jsonObject = {};
+    
+        formData.forEach(function(value, key){
+            jsonObject[key] = value;
+        });
+    
+        var json = JSON.stringify(jsonObject);
+        console.log(json);
+    }
+    </script>
+    
+</body>
+</html>
